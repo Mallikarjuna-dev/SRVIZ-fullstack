@@ -89,6 +89,7 @@ export default function AddOnsAndContact({ onEnquire }) {
             <input
               name='name'
               placeholder='Name'
+              disabled
               className='w-full border rounded p-2'
             />
             <input
@@ -109,7 +110,7 @@ export default function AddOnsAndContact({ onEnquire }) {
             ></textarea>
             <button
               type='submit'
-              className='w-full px-4 py-2 rounded-full bg-orange-600 text-white font-semibold'
+              className='w-full px-4 py-2  rounded-full bg-orange-600 text-white font-semibold'
             >
               Send enquiry
             </button>

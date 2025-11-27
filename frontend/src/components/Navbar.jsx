@@ -44,13 +44,15 @@ export default function Navbar({ onCTAClick }) {
 
       {open && (
         <div className='md:hidden border-t bg-white'>
-          <div className='px-4 py-4 flex flex-col gap-3'>
+          <div className='px-4 py-3 flex flex-col text-md font-semibold text-slate-600 gap-3'>
             <a href='#packages' onClick={() => setOpen(false)}>
               Top packages
             </a>
+            <hr/>
             <a href='#how' onClick={() => setOpen(false)}>
               How it works
             </a>
+            <hr/>
             <a href='#itinerary' onClick={() => setOpen(false)}>
               Itinerary
             </a>
@@ -59,7 +61,7 @@ export default function Navbar({ onCTAClick }) {
                 setOpen(false)
                 onCTAClick()
               }}
-              className='mt-2 px-4 py-2 rounded-full bg-accent text-white'
+              className='mt-1 px-4 py-2 rounded-full bg-orange-500 text-white'
             >
               Plan My Trip
             </button>

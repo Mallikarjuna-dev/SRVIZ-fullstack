@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { Bounce, toast, ToastContainer } from 'react-toastify'
 
 export default function LeadFormModal({ onClose }) {
   const [form, setForm] = useState({
@@ -8,37 +9,26 @@ export default function LeadFormModal({ onClose }) {
     phone: '',
     message: '',
   })
-  const [error, setError] = useState('')
+
   const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
 
   const change = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
 
   const submit = async (e) => {
     e.preventDefault()
-    setError('')
     if (!form.name || !form.email || !form.phone) {
-      setError('Please complete required fields')
+      toast.warn('Please fill required fields')
       return
     }
     setLoading(true)
     try {
-      // try posting to backend, but if backend not running, ignore error and show success
       await axios.post('http://localhost:4000/leads', form, { timeout: 3000 })
-      setSuccess(true)
-      setTimeout(() => {
-        setLoading(false)
-        onClose()
-      }, 1200)
+      //   setSuccess(true)
+      toast.success("Submitted — we'll reach out soon")
     } catch (err) {
-      // still show success (local) — you can check console for backend connectivity
-      console.warn('Lead submit error (backend may be offline):', err.message)
-      setSuccess(true)
-      setTimeout(() => {
-        setLoading(false)
-        onClose()
-      }, 1000)
+      toast.error(err.message)
+      //   setSuccess(true)
     }
   }
 
@@ -52,15 +42,6 @@ export default function LeadFormModal({ onClose }) {
         <p className='text-sm text-slate-600 mt-1'>
           Tell us a little and we’ll contact you with a personalized quote.
         </p>
-
-        {error && (
-          <div className='mt-4 p-2 bg-red-50 text-red-700 rounded'>{error}</div>
-        )}
-        {success && (
-          <div className='mt-4 p-2 bg-green-50 text-green-700 rounded'>
-            Submitted — we'll reach out soon
-          </div>
-        )}
 
         <form onSubmit={submit} className='mt-4 space-y-3'>
           <input
@@ -112,6 +93,17 @@ export default function LeadFormModal({ onClose }) {
             </button>
           </div>
         </form>
+        <ToastContainer
+          position='top-right'
+          autoClose={4000}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme='colored'
+          transition={Bounce}
+        />
       </div>
     </div>
   )
