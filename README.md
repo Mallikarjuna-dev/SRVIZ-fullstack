@@ -248,7 +248,7 @@ node server.js
 
 -  **Frontend (Vercel):** https://srviz-fullstack.vercel.app/
 
--  **Backend (Render):** ```https://sportstravel-server.onrender.com```
+-  **Backend (Render):** https://sportstravel-server.onrender.com
 
 ## 👨‍💻 Author
 *Mallikarjuna Annigeri*
