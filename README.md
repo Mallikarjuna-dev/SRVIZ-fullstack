@@ -210,7 +210,7 @@ http://localhost:4000/
 
 - Smooth spacing, compact UI
 
-## 🎨 UI/UX Notes
+## 🎨 UI/UX
 
 - Closely matches the reference screenshot
 
@@ -246,7 +246,7 @@ node server.js
 
 ## 🔗 Live links
 
--  **Frontend (Vercel):** ```https://srviz-fullstack.vercel.app/```
+-  **Frontend (Vercel):** https://srviz-fullstack.vercel.app/
 
 -  **Backend (Render):** ```https://sportstravel-server.onrender.com```
 
