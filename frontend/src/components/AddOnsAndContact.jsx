@@ -89,7 +89,6 @@ export default function AddOnsAndContact({ onEnquire }) {
             <input
               name='name'
               placeholder='Name'
-              disabled
               className='w-full border rounded p-2'
             />
             <input

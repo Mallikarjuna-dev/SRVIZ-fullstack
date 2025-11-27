@@ -31,7 +31,7 @@ export default function LeadFormModal({ onClose }) {
       setTimeout(() => {
         setLoading(false)
         onClose()
-      }, 4000)
+      }, 2000)
     } catch (err) {
       toast.error(err.message)
       setTimeout(() => {
