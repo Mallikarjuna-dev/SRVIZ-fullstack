@@ -28,8 +28,16 @@ export default function LeadFormModal({ onClose }) {
 
       //   setSuccess(true)
       toast.success("Submitted — we'll reach out soon")
+      setTimeout(() => {
+        setLoading(false)
+        onClose()
+      }, 4000)
     } catch (err) {
       toast.error(err.message)
+      setTimeout(() => {
+        setLoading(false)
+        onClose()
+      }, 3000)
       //   setSuccess(true)
     }
   }
