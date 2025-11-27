@@ -31,13 +31,13 @@ export default function LeadFormModal({ onClose }) {
       setTimeout(() => {
         setLoading(false)
         onClose()
-      }, 2000)
+      }, 4000)
     } catch (err) {
       toast.error(err.message)
       setTimeout(() => {
         setLoading(false)
         onClose()
-      }, 3000)
+      }, 4000)
       //   setSuccess(true)
     }
   }
