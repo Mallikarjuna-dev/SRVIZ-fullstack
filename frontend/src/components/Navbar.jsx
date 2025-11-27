@@ -9,7 +9,9 @@ export default function Navbar({ onCTAClick }) {
         <div className='h-16 flex items-center justify-between'>
           <div className='flex items-center gap-4'>
             <div className='text-2xl font-extrabold text-slate-900'>
-              SPORTS<span className='sm-hidden text-accent'>TRAVEL</span>
+              <a href='#'>
+                SPORTS<span className='sm-hidden text-accent'>TRAVEL</span>
+              </a>
             </div>
             <nav className='hidden md:flex pl-28 gap-8 text-md font-semibold text-slate-600'>
               <a href='#packages' className='hover:text-slate-900'>
