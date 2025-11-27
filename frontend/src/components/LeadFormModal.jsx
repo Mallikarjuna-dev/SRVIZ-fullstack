@@ -23,7 +23,9 @@ export default function LeadFormModal({ onClose }) {
     }
     setLoading(true)
     try {
-      await axios.post('http://localhost:4000/leads', form, { timeout: 3000 })
+      // await axios.post('http://localhost:4000/leads', form, { timeout: 3000 })
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/leads`, form)
+
       //   setSuccess(true)
       toast.success("Submitted — we'll reach out soon")
     } catch (err) {
