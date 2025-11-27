@@ -110,7 +110,7 @@ export default function AddOnsAndContact({ onEnquire }) {
             ></textarea>
             <button
               type='submit'
-              className='w-full px-4 py-2  rounded-full bg-orange-600 text-white font-semibold'
+              className='w-full px-4 py-2 rounded-full bg-orange-600 text-white font-semibold'
             >
               Send enquiry
             </button>

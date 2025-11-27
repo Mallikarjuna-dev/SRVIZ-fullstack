@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 export default function Navbar({ onCTAClick }) {
   const [open, setOpen] = useState(false)
+
   return (
     <header className='fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -48,11 +49,11 @@ export default function Navbar({ onCTAClick }) {
             <a href='#packages' onClick={() => setOpen(false)}>
               Top packages
             </a>
-            <hr/>
+            <hr />
             <a href='#how' onClick={() => setOpen(false)}>
               How it works
             </a>
-            <hr/>
+            <hr />
             <a href='#itinerary' onClick={() => setOpen(false)}>
               Itinerary
             </a>
